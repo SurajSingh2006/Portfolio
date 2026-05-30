@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CustomCursor from "@/components/effects/CustomCursor";
+import CustomCursor from "@/components/ui/CustomCursor";
+import BackgroundEffects from "@/components/ui/BackgroundEffects";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased dark`}>
       <body className="min-h-full flex flex-col relative bg-background text-foreground selection:bg-foreground selection:text-background">
+        <BackgroundEffects />
         <div className="noise-bg" />
         <CustomCursor />
         <SmoothScroll>
